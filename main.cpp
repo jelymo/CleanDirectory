@@ -12,7 +12,9 @@ int main(int argc, char** argv)
 {
     if(argc < 2)
     {
-        log("Arguments too few");
+        log("*******************************Clean Directory********************************");
+        log("This will delete all files that matches a given Git ignore file in a directory.");
+        log(std::string("usage: ")+ argv[0] + " [gitginore location] [directory to be cleaned]");
         return -1;
     }
     std::ifstream gitIgnoreFileStream{argv[1]};
